@@ -1,0 +1,25 @@
+n = int(input("Enter number of terms: "))
+
+if n <= 0:
+    print("Please enter a positive integer.")
+else:
+    a = 0
+    b = 1
+    count = 1  # Start counting from 1
+    
+    # For storing the nth term
+    nth_term = 0
+    
+    while count <= n:
+        print(a, end=' ')
+        
+        # If this is the nth term, save it
+        if count == n:
+            nth_term = a
+        
+        next_term = a + b
+        a = b
+        b = next_term
+        count += 1
+    
+    print("\nThe", n, "th term is:", nth_term)

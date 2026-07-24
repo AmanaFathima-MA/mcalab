@@ -1,0 +1,77 @@
+<html>
+    <head>
+    <title>grid and float</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            COLOR:rgb(221, 160, 207);
+        }
+        .grid-container {
+        display:grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns:(2,1fr);
+        gap:10px;
+        background-color:rgb(218, 225, 224);
+        padding:10px;
+        float:CENTER;
+        }
+        .grid-items{
+            background-color: #c9ade0;
+            color: white;
+            padding: 20px;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .float-container
+        {
+            background-color: #92d0e1;
+            padding: 10px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            
+        }
+        .float-box
+        {
+          float:center;
+          width: 30%;
+            margin-right: 3.333%;
+            background-color: #cad1d7;
+            color: white;
+            padding: 20px;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+    </style>
+    <body>
+        <center>
+        <h2 >Grid </h2>
+        <div class="grid-container">
+            <div class="grid-items">home</div>
+            <div class="grid-items">user</div>
+            <div class="grid-items">booking</div>
+            <div class="grid-items">cancel</div>
+            <div class="grid-items">logout</div>
+            
+            
+            </div>
+            <h2>Float </h2>
+
+            <div class="float-container">
+            <div class="float-box"><img src="/home/user/pic.jpeg" width="200" height="400"></div>
+            <div class="float-box"><img src="/home/user/pic2.jpg" width="500" height="400"></div>
+            <div class="float-box"><img src="/home/user/p10.jpg" width="500" height="400"></div>
+
+        </div>
+        </center>
+     
+    </body>
+</head>
+</html>

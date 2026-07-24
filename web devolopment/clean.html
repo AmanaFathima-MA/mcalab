@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cooking and Cleaning</title>
+</head>
+<body>
+  <h2>Cooking Simulation</h2>
+  <div id="output"></div>
+
+  <script>
+    document.getElementById("output").innerHTML += " Cooking started...<br>";
+
+
+    setTimeout(() => {
+      document.getElementById("output").innerHTML += " Cooking finished!<br>";
+    }, 3000);
+
+    document.getElementById("output").innerHTML += " Cleaning started...<br>";
+  </script>
+</body>
+</html>

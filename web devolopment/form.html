@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Student Registration Form</title>
+        <style>
+            body{ text-align:center; font-family:arial,sans-serif; background-color:#fff7f8}
+ table{width:50%; border:1px solid black; border-collapse:collapse;margin-top:10px; background-color:lightgrey}
+ th,td{border:1px; padding:4px;}
+ .actions{margin-top:10px; padding:6px 12px;}
+ button{margin-top:10px; padding:6px 12px; border:1px solid black; background:white; cursor:pointer;}
+ button:hover
+ {
+    background:lightgrey;
+ }
+ label{display:block; margin-top:8px;}
+fieldset{margin-top:8px; background-color:#f2f2f2}
+
+        </style>
+    </head>
+    <body >
+        <center><h1>Admission Registration Form</h1></center>
+        <H3><p>Courses offered: B.A,BSc,BCA</p></H3>
+        <form>
+            <fieldset>
+                <legend>Course Selection</legend>
+                <label><input type="radio" name="course" value="B.A">B.A</label>
+                <label><input type="radio" name="course" value="BSc">BSc</label>
+                <label><input type="radio" name="course" value="BCA">BCA</label>
+            </fieldset><br>
+            <label>Full Name:</label>
+            <label><input type="text" name="name" ></label><br><br>
+            <label>Date of birth:</label>
+            <label><input type="date" name=dob ></label>
+            
+
+
+<br><br>
+            <fieldset>
+                <legend>Gender:</legend>
+                <label><input type="radio" name="male" value="male">Male</label>
+                <label><input type="radio" name="female" value="female">Female</label>
+                <label><input type="radio" name="others" value="others">Others</label>
+            </fieldset><br><br>
+            <label>Phone number:</label>
+            <label><input type="tel" name=phone ></label>
+            
+            <label>Parent/ Guardian:</label>
+            <label><input type="text" name=parent ></label>
+            <br>
+            <label>Address:</label><br>
+            <label><textarea cols="20" rows="5"></textarea></label><br><br>
+            <fieldset>
+                
+             <legend>Hobbies and activities:</legend>
+             <label><input type="checkbox" name="hobby" value="reading">Reading 
+             <input type="checkbox" name="hobby" value="dance">Dance 
+            <input type="checkbox" name="hobby" value="art">Drawing 
+             <input type="checkbox" name="hobby" value="">Coding </label>
+                
+            </fieldset><br><br>
+            <fieldset >
+                <legend>Office Use Only</legend>
+                <table border="1" >
+                    <tr>
+                        <th>
+                            Recieved by:</th>
+                            <td>    </td>
+                        <th>Date:</th>
+                        <td>   </td>
+                    </tr>
+                    <tr>
+                        <th>Application number:</th><td>    </td>
+                        <th>Document verified</th>
+                    <td>
+                        <label><input type="radio" value="yes">yes</label>
+                        <label><input type="radio" value="yes">no</label>
+                    </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Remarks:
+                            <td colspan="3"></td>
+                        </th>
+                    </tr>
+
+                </table>
+            </fieldset>
+            <div class="actions">
+                <button type="reset">Reset</button>
+                <button type="reset">Submit</button>
+            </div>
+        </form>
+    </body>
+</html>

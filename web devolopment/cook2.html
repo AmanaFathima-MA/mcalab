@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Cooking</title>
+    <link rel="stylesheet" type="text/css" href="/home/user/style.css">
+
+</head>
+<body>
+    <h2>Cooking and Cleaning</h2>
+
+    <button onclick="startCooking()">Start Cooking</button>
+    <button onclick="startCleaning()">Start Cleaning</button>
+
+    <p id="cooking">Cooking not started yet...</p>
+    <p id="cleaning">Cleaning not started yet...</p>
+
+    <script>
+        let cookingInterval;
+        let cleaningInterval;
+
+        function startCooking() {
+            clearInterval(cookingInterval);  // Clear any existing interval if already running
+            let cookingTime = 3;
+            document.getElementById("cooking").innerText = `Cooking: ${cookingTime} seconds left`;
+            cookingInterval = setInterval(() => {
+                cookingTime--;
+                if (cookingTime > 0) {
+                    document.getElementById("cooking").innerText = `Cooking: ${cookingTime} seconds left`;
+                } else {
+                    document.getElementById("cooking").innerText = "Cooking: Finished...";
+                    clearInterval(cookingInterval);
+                }
+            }, 1000);
+        }
+
+        function startCleaning() {
+            clearInterval(cleaningInterval);  // Clear any existing interval if already running
+            let cleaningTime = 3;
+            document.getElementById("cleaning").innerText = `Cleaning: ${cleaningTime} seconds left`;
+            cleaningInterval = setInterval(() => {
+                cleaningTime--;
+                if (cleaningTime > 0) {
+                    document.getElementById("cleaning").innerText = `Cleaning: ${cleaningTime} seconds left`;
+                } else {
+                    document.getElementById("cleaning").innerText = "Cleaning: Finished...";
+                    clearInterval(cleaningInterval);
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
+

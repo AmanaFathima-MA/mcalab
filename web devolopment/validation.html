@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>
+            student
+        </title>
+        <link rel="stylesheet" type="text/css" href="/home/user/amana/s1 mca/web devolopment/style.css">
+        <script>
+            function val()
+            {
+                let name= document.getElementById("name").value.trim();
+                let roll= document.getElementById("roll").value.trim();
+                let marks= document.getElementById("marks").value.trim();
+                if(name==="")
+                {
+                    alert("enter name");
+                    return false;
+                }
+                if(roll==="")
+                {
+                    alert("enter rollno");
+                    return false;
+                }
+                if(isNaN(roll))
+                {
+                    alert("roll must be number");
+                }
+                if(marks==="")
+                {
+                    alert("enter marks");
+                    return false;
+                }
+                if(isNaN(marks))
+                {
+                    alert("mark must be number");
+                    return false;
+                }
+                alert("Submitted!");
+                return true;
+
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return val()">
+        <h1>Student result</h1>
+        <label>Name:</label>
+        <input type="text" id="name">
+        <br><br>
+        <label>Roll number:</label>
+        <input type="number" id="roll"><br><br>
+        <label>Subject:</label>
+        <input type="radio" value="maths">Maths
+        <input type="radio" value="chemistry">Chemistry
+        <input type="radio" value="phy">Physics<br><br>
+        <label>Mark:</label>
+        <input type="text" id="marks"><br><br>
+        <select>
+           
+            <option value="lab 1">theory</option>
+            <option value="lab 2">lab</option>
+            </select><br><br>
+        <button style="background-color:lightblue;">submit</button>
+        <button>cancel</button>
+
+    </body>
+</form>
+</html>

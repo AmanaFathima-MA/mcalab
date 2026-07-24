@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Cooking</title>
+    <link rel="stylesheet" type="text/css" href="/home/user/amana/s1 mca/web devolopment/style.css">
+</head>
+<body>
+    <h2>Cooking and Cleaning</h2>
+
+    <button onclick="start()">Start Tasks</button>
+    <p id="cooking">Cooking not started yet...</p>
+    <p id="cleaning">Cleaning not started yet...</p>
+
+    <script>
+        function start() {
+            // Corrected 'InnerText' to 'innerText'
+            document.getElementById("cooking").innerText = "Cooking: Started...";
+            document.getElementById("cleaning").innerText = "Cleaning: Started...";
+
+            // Using setTimeout (case-sensitive) and correct element IDs
+            setTimeout(() => {
+                document.getElementById("cooking").innerText = "Cooking: Finished...";
+            }, 3000);
+
+            setTimeout(() => {
+                document.getElementById("cleaning").innerText = "Cleaning: Finished...";
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
